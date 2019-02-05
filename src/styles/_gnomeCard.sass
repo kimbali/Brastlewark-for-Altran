@@ -1,0 +1,105 @@
+.gnome-card
+    width: 100%
+    height: 100%
+    padding-top: 100px
+
+    .gnome
+        background: $background-transparent
+        width: 70%
+        margin: auto
+        border-radius: 15px
+        padding: 30px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: 'grid-1 grid-2' 'grid-3 grid-4'
+
+        @media screen and (max-width: 500px)
+            grid-template-areas: 'grid-1' 'grid-2' 'grid-3' 'grid-4'
+            grid-template-columns: 1fr
+            grid-gap: 10px
+            width: 90%
+            padding: 15px
+
+        .grid-1
+            grid-area: grid-1
+
+            .thumbnail-box
+                width: 300px
+                height: 300px
+
+                .thumbnail
+                    height: 100%;
+                    border-radius: 15px
+                    margin-bottom: 10px
+
+            .name-box
+                background: url('../image/pergamino.jpg')
+                background-size: cover
+                background-repeat: no-repeat
+                background-position: center
+                width: 90%
+
+                p
+                    color: black
+                    margin: 10px
+                    padding: 0 10px
+                    font-size: 1.2em
+                    color: black
+                    font-weight: bold
+                    text-align: center
+
+        .grid-2
+            grid-area: grid-2
+
+            .size-box
+                background-color: $background-transparent
+                border-radius: 15px
+                padding: 10px 20px
+                margin-top: 15px
+
+                p
+                    margin: 0
+                    font-size: 1em
+
+
+        .grid-3
+            grid-area: grid-3
+
+        .grid-4
+            grid-area: grid-4
+            
+
+.gnome-paint
+
+    .gnome-width-thin
+        width: 100px
+
+    .gnome-width-healthy
+        width: 150px
+
+    .gnome-width-fat
+        width: 200px
+
+    .gnome-height-short
+        height: 100px
+
+    .gnome-height-ordinary
+        height: 150px
+
+    .gnome-height-tall
+        height: 200px
+
+    .gnome-paint-draw
+        height: 100%
+        width: 100%
+    
+    .gnome-paint-text
+        text-align: center
+
+.align-top
+    display: flex
+    justify-content: center
+    align-items: flex-start
+
+    @media screen and (max-width: 500px)
+        justify-content: start

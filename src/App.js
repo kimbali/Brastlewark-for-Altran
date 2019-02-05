@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import './styles/index.sass';
+
+import Landing from './components/Landing';
+import HomePage from './components/HomePage';
+import GnomeCard from './components/GnomeCard';
+
+const store = require('./reducers').init()
 
 class App extends Component {
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+            <Switch>
+              <Route exact path="/" render={() => <Redirect to="/gnomeland" />} />
+              <Route exact path="/gnomeland" render={() => <Landing />} />
+              <Route exact path="/brastlewark" render={() => <HomePage />} />
+              <Route exact path="/brastlewark/:id" component={GnomeCard} />
+            </Switch>
+        </div>
+      </Provider>
     );
   }
 }
 
-export default App;
+export default  withRouter(App);

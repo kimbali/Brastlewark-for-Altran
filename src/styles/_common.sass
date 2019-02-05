@@ -1,0 +1,107 @@
+$main-color: #5fff38
+$background-color: black
+$box-shadow: 0 10px 6px -6px black;
+$background-transparent: rgba(5, 10, 5, 0.6)
+$background-error: rgb(233, 62, 62)
+$border-bottom: 2px solid $main-color
+    
+*
+    font-family: 'Amarante', cursive;
+    box-sizing: border-box
+    color: $main-color
+
+*:focus 
+    outline: none
+
+body, html, #root, .App
+    width: 100vw
+    height: 180%
+    background: $background-color
+    margin: 0
+    padding: 0
+
+// body::-webkit-scrollbar 
+//     display: none
+
+.name 
+    font-family: 'Indie Flower', cursive;
+    text-transform: capitalize
+
+.title
+    font-family: 'Lobster', cursive;
+
+p, input, li, label, button, a, select
+    font-size: 1.2em
+    margin-top: 20px
+
+ul 
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+li
+    margin: 0
+    padding: 0
+
+a 
+    text-decoration: none
+    cursor: pointer
+
+.center 
+    display: flex
+    justify-content: center
+    align-items: center   
+
+.column
+    flex-direction: column
+
+.center-text
+    text-align: center
+
+.uppercase
+    text-transform: uppercase
+
+.color-Pink
+    background: #FF75F5; 
+
+.color-Black
+    background: Black; 
+
+.color-Green
+    background: #09CD03; 
+
+.color-Blue
+    background: #0365CD; 
+
+.color-Gray
+    background: #C6C6C6; 
+
+.color-Red
+    background: #FF0606; 
+
+.App
+    background: url('../image/forest.jpg')
+    background-size: cover
+    background-position: center
+    background-attachment: fixed
+
+.btn
+    padding: 10px 15px;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid;
+    transition: 1s
+    cursor: pointer
+
+    &:hover
+        background: $background-transparent
+        transition: 1s
+
+.margin-top
+    margin-top: 20px
+
+
+
+
+        
+

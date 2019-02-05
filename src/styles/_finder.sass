@@ -1,0 +1,80 @@
+.finder
+    width: 85%
+    padding: 1.5em
+    background: $background-transparent
+    border-radius: 15px
+
+    .text-box
+        p
+            text-align: justify
+    
+    .profession-form
+
+        select
+            background: transparent
+            border: none 
+            border-bottom: $border-bottom
+            outline: none
+
+            option
+                color: black
+        
+        button
+            margin: 15px
+    
+    .background-colored
+        width: 80%
+        background: rgba(5, 10, 5, 0.7)
+        padding: 20px
+        border-radius: 15px
+        margin: 20px auto
+
+        @media screen and (max-width: 500px) 
+            width: 90%
+
+            .sort-buttons
+                flex-direction: column
+
+                .sort-button
+                    margin: 0
+            
+.sort-buttons
+
+    .sort-button
+        border-bottom: 2px solid transparent
+        margin: 20px
+
+        &:hover
+            border-bottom: $border-bottom
+
+
+        button
+            cursor: pointer
+            border: none
+            background: transparent
+
+.biggest-btn
+    width: 100%
+
+.wrapper 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    margin: 50px auto
+
+.zero
+    margin-top: 0
+    height: 150px
+
+.error 
+    background: $background-error
+    border-radius: 15px
+    padding: 5px
+
+    p
+        color: black
+        margin: 5px
